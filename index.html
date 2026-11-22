@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Texas Law Officer AI">
+  <title>Texas Law Officer AI</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <div class="badge">TX</div>
+    <div>
+      <h1>Texas Law Officer AI</h1>
+      <p>Texas legal research &amp; decision support</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="privacy">
+    <strong>Privacy reminder</strong>
+    <p>Do not enter real names, DOBs, addresses, phone numbers, DL numbers, plates, VINs, case numbers, medical information, juvenile identifying information, or other confidential information.</p>
+  </section>
+
+  <section class="card">
+    <h2>What are you dealing with?</h2>
+    <div class="people" id="people"></div>
+    <button class="secondary" id="addPerson">+ Add Person</button>
+
+    <label for="scenario">Situation</label>
+    <textarea id="scenario" placeholder="Describe the situation using generic names and facts only..."></textarea>
+
+    <label for="question">What do you want to know?</label>
+    <textarea id="question" placeholder="Example: Does this establish probable cause for theft?"></textarea>
+
+    <label for="source">Sources</label>
+    <select id="source">
+      <option>All Texas Law</option>
+      <option>Texas Penal Code</option>
+      <option>Texas Code of Criminal Procedure</option>
+      <option>Texas Transportation Code</option>
+      <option>Texas Property Code</option>
+      <option>Texas Family Code</option>
+      <option>Case Law</option>
+    </select>
+
+    <button class="primary" id="ask">ASK TEXAS LAW OFFICER AI</button>
+    <button class="secondary" id="safe">Make My Question Safe</button>
+  </section>
+
+  <section class="grid">
+    <button class="tile" data-action="research">Research</button>
+    <button class="tile" data-action="situation">Call / Situation</button>
+    <button class="tile" data-action="report">Report Check</button>
+    <button class="tile" data-action="missing">Missing / Alerts</button>
+    <button class="tile" data-action="law">Texas Law</button>
+  </section>
+
+  <section class="card output" id="output">
+    <h2>Legal Analysis</h2>
+    <p class="muted">Your analysis will appear here.</p>
+  </section>
+</main>
+
+<footer>
+  Prototype web app. Legal information should be verified against current official Texas sources before reliance.
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
